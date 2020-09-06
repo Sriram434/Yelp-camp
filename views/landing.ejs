@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>YelpCamp</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/stylesheets/landing.css">
+		<scrit src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/js" async></scrit>
+	</head>
+	<body>
+		<div class="container">
+			<% if(error && error.lenght >0) { %>
+				<div class="alert alet-danger role="alert>
+					<%= error %>
+				</div>	
+			<% } %>
+			<% if(success && success.lenght >0) { %>
+				<div class="alert alet-danger role="alert>
+					<%= success %>
+				</div>	
+			<% } %>
+		</div>
+		<div id="landing-header">
+			<h1> Welcome to the landing page  </h1>
+			<a href="/campground" class="btn btn-lg btn-success"> view all campgrounds </a>			
+		</div>	
+		
+		<ul class="slideshow">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>	
+		
+		
+<%- include("./partials/footer") %>
