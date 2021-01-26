@@ -18,9 +18,11 @@ var commentRoutes = require("./routes/comments"),
 	campgroundRoutes = require("./routes/campgrounds"),
 	indexRoutes = require("./routes/index")
 
+//Exported the mongo local url using export comand using CLI comand
+//Exported the heroku mongo url to heroku 
 // mongodb://localhost:27017/yelp_camp_v12
-console.log(process.env.DATABASEURL)
-mongoose.connect('mongodb+srv://sriram:sriram@cluster0.3tdpa.mongodb.net/<dbname>?retryWrites=true&w=majority',{
+// var url = process.env.DATABASEURL || mongodb://localhost:27017/yelp_camp_v12 (we could give this in process.env.DATABASEURL )
+mongoose.connect(process.env.DATABASEURL,{
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 })

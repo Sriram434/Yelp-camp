@@ -1,5 +1,5 @@
 var express = require("express");
-var	router = express.Router({mergeParams: true});
+var	router = express.Router({mergeParams: true}); // Gets the parents parms id to the child
 var Campground = require("../models/campgrounds");
 var Comment = require("../models/comments");
 var middlewareObj = require("../middleware"); //index.js is not required as express automatically detects and take the index.js file
